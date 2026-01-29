@@ -8,35 +8,35 @@ A modern, feature-rich desktop application for managing academic assignments and
 
 ---
 
-## ? Features
+## > Features
 
-### ?? Assignment Management
+### > Assignment Management
 - **Create, Edit & Delete Assignments** - Full CRUD operations for managing your academic workload
 - **Rich Assignment Details** - Store assignment names, descriptions, due dates, times, course information, and submission URLs
 - **Interactive Calendar View** - Visualize your assignments with a custom calendar control showing deadlines at a glance
 - **Quick Search & Browse** - Easily find assignments and view all upcoming tasks
 
-### ?? Brightspace Integration
+### > Brightspace Integration
 - **Automatic Sync** - Pull assignments directly from your Brightspace (D2L) courses
 - **Secure Credential Storage** - Store your Brightspace API credentials securely in local storage
 - **One-Click Sync** - Manually sync assignments at any time with the "Sync Now" button
 - **Auto-Sync on Startup** - Option to automatically sync Brightspace assignments when the application launches
 - **Connection Validation** - Test your Brightspace connection before syncing to ensure credentials are correct
 
-### ?? Data Persistence
+### > Data Persistence
 - **Automatic Saving** - All changes are automatically saved to local storage
 - **JSON-Based Storage** - Assignments stored in human-readable JSON format
 - **Cross-Session Persistence** - Assignments persist between application sessions
 - **Sample Data** - New installations include helpful sample assignments to get you started
 
-### ?? Modern User Interface
+### > Modern User Interface
 - **Material Design** - Clean, modern interface built with Material Design principles
 - **Tab-Based Navigation** - Organize features into Calendar and Settings tabs
 - **Responsive Layout** - Adapts to different window sizes with smooth scrolling
 - **Notification System** - Visual feedback for all user actions (create, update, delete, sync)
 - **Dark/Light Theme Support** - Material Design theme system
 
-### ?? Settings & Configuration
+### >> Settings & Configuration
 - **Brightspace Credentials** - Manage your Brightspace URL and API access token
 - **Auto-Sync Preferences** - Enable or disable automatic synchronization on startup
 - **Clear Credentials** - Securely remove stored credentials from your machine
@@ -44,7 +44,7 @@ A modern, feature-rich desktop application for managing academic assignments and
 
 ---
 
-## ?? Getting Started
+## >> Getting Started
 
 ### Prerequisites
 - Windows 7 or later
@@ -76,11 +76,11 @@ On your first launch, Assignment Manager will:
 
 ---
 
-## ?? Brightspace Integration Setup
+## >> Brightspace Integration Setup
 
 ### Step 1: Generate API Credentials
 1. Log in to your Brightspace instance
-2. Navigate to **User Profile** ? **API Keys** (or **Developer Tools**)
+2. Navigate to **User Profile** > **API Keys** (or **Developer Tools**)
 3. Create a new API key and note:
    - **Brightspace URL**: Full URL to your Brightspace instance (e.g., `https://myuniversity.brightspace.com`)
    - **Access Token**: Your generated API access token
@@ -102,7 +102,7 @@ For detailed troubleshooting and more information, see [BRIGHTSPACE_INTEGRATION.
 
 ---
 
-## ?? Data Storage
+## >> Data Storage
 
 ### Storage Locations
 - **Assignments**: `%AppData%\WpfApp1\assignments.json`
@@ -130,32 +130,32 @@ For more details, see [PERSISTENCE_DOCS.md](WpfApp1/PERSISTENCE_DOCS.md).
 
 ---
 
-## ??? Project Structure
+## >>> Project Structure
 
 ```
 WpfApp1/
-??? Controls/                    # Custom UI controls
-?   ??? CustomCalendar.xaml     # Calendar control for assignment visualization
-?   ??? CustomCalendar.xaml.cs
-?   ??? SettingsPanel.xaml      # Settings panel for configuration
-?   ??? SettingsPanel.xaml.cs
-??? Services/                    # Business logic services
-?   ??? BrightspaceApiService.cs # Brightspace API integration
-?   ??? BrightspaceCredentialsManager.cs # Credential management
-?   ??? AssignmentStorageService.cs # Data persistence
-??? ViewModels/                  # MVVM ViewModels
-?   ??? AssignmentViewModel.cs  # Main application ViewModel
-??? Models/                      # Data models
-?   ??? Assignment.cs           # Assignment data model
-??? MainWindow.xaml             # Main application window
-??? MainWindow.xaml.cs
-??? App.xaml                    # Application configuration
-??? README.md
+>>> Controls/                    # Custom UI controls
+>   >>> CustomCalendar.xaml     # Calendar control for assignment visualization
+>   >>> CustomCalendar.xaml.cs
+>   >>> SettingsPanel.xaml      # Settings panel for configuration
+>   >>> SettingsPanel.xaml.cs
+>>> Services/                    # Business logic services
+>   >>> BrightspaceApiService.cs # Brightspace API integration
+>   >>> BrightspaceCredentialsManager.cs # Credential management
+>   >>> AssignmentStorageService.cs # Data persistence
+>>> ViewModels/                  # MVVM ViewModels
+>   >>> AssignmentViewModel.cs  # Main application ViewModel
+>>> Models/                      # Data models
+>   >>> Assignment.cs           # Assignment data model
+>>> MainWindow.xaml             # Main application window
+>>> MainWindow.xaml.cs
+>>> App.xaml                    # Application configuration
+>>> README.md
 ```
 
 ---
 
-## ?? Architecture
+## >> Architecture
 
 Assignment Manager follows the **MVVM (Model-View-ViewModel)** pattern:
 
@@ -168,7 +168,7 @@ This architecture ensures clean separation of concerns and makes the codebase ea
 
 ---
 
-## ?? Security
+## >> Security
 
 - **Local Storage Only**: Your data never leaves your machine unless you explicitly sync with Brightspace
 - **Secure Credential Handling**: API credentials are stored locally and never transmitted unnecessarily
@@ -178,7 +178,7 @@ This architecture ensures clean separation of concerns and makes the codebase ea
 
 ---
 
-## ??? Development
+## >>> Development
 
 ### Building from Source
 ```bash
@@ -205,7 +205,7 @@ dotnet publish -c Release -o ./publish
 
 ---
 
-## ?? Usage Examples
+## >> Usage Examples
 
 ### Creating an Assignment
 1. Click the **Create New Assignment** button
@@ -235,7 +235,7 @@ dotnet publish -c Release -o ./publish
 
 ---
 
-## ?? Troubleshooting
+## >> Troubleshooting
 
 ### Brightspace Connection Issues
 - Verify your Brightspace URL is correct (should not include `/d2l/` or `/api/`)
@@ -257,13 +257,13 @@ For more detailed troubleshooting, see the [Brightspace Integration Documentatio
 
 ---
 
-## ?? License
+## >> License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## ?? Contributing
+## >> Contributing
 
 Contributions are welcome! Please feel free to:
 1. Fork the repository
@@ -274,7 +274,7 @@ Contributions are welcome! Please feel free to:
 
 ---
 
-## ?? Support
+## >> Support
 
 For issues, questions, or suggestions:
 - Open an [issue on GitHub](https://github.com/eamaze/AssignmentManager/issues)
@@ -283,7 +283,7 @@ For issues, questions, or suggestions:
 
 ---
 
-## ?? Acknowledgments
+## >> Acknowledgments
 
 - Built with [Material Design in XAML](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
 - Brightspace API integration based on [official documentation](https://docs.valence.desire2learn.com/)
@@ -291,4 +291,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made with ?? for students and educators**
+**Made with >> for students and educators**
