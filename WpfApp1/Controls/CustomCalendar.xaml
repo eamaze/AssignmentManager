@@ -1,0 +1,71 @@
+<UserControl x:Class="WpfApp1.Controls.CustomCalendar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <Border Background="Transparent" Margin="8" CornerRadius="8" ClipToBounds="True">
+        <Grid>
+            <!-- Background Layer - Partially Transparent -->
+            <Border Background="#1A1A2E" Opacity="0.6" CornerRadius="8"/>
+            
+            <!-- Content Layer - Fully Opaque -->
+            <Grid Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Header with Navigation and View Selector -->
+                <Border Grid.Row="0" Padding="16" Background="Transparent" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,0,0,1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Navigation Buttons -->
+                        <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button Click="PreviousButton_Click" Background="Transparent" 
+                                    Foreground="{DynamicResource SecondaryHueMid}" FontSize="24" 
+                                    Padding="8" Width="40" Height="40" FontWeight="Bold" Cursor="Hand">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE76B;"/>
+                            </Button>
+                            <TextBlock x:Name="HeaderTextBlock" Text="" FontSize="16" FontWeight="SemiBold" 
+                                       VerticalAlignment="Center" Margin="16,0" Foreground="{DynamicResource MaterialDesignBody}" 
+                                       MinWidth="150" TextAlignment="Center" FontFamily="Segoe UI"/>
+                            <Button Click="NextButton_Click" Background="Transparent" 
+                                    Foreground="{DynamicResource SecondaryHueMid}" FontSize="24" 
+                                    Padding="8" Width="40" Height="40" FontWeight="Bold" Cursor="Hand">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE76C;"/>
+                            </Button>
+                        </StackPanel>
+
+                        <!-- View Mode Selector -->
+                        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button x:Name="DayViewButton" Content="Day" Click="DayViewButton_Click" 
+                                    Background="{DynamicResource SecondaryHueMid}" Foreground="{DynamicResource MaterialDesignBody}"
+                                    Padding="12,8" Margin="0,0,4,0" FontSize="12" FontWeight="SemiBold" FontFamily="Segoe UI"
+                                    Cursor="Hand"/>
+                            <Button x:Name="WeekViewButton" Content="Week" Click="WeekViewButton_Click" 
+                                    Background="Transparent" Foreground="{DynamicResource MaterialDesignBodyLight}"
+                                    Padding="12,8" Margin="0,0,4,0" FontSize="12" FontWeight="SemiBold" FontFamily="Segoe UI"
+                                    Cursor="Hand" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
+                            <Button x:Name="MonthViewButton" Content="Month" Click="MonthViewButton_Click" 
+                                    Background="Transparent" Foreground="{DynamicResource MaterialDesignBodyLight}"
+                                    Padding="12,8" Margin="0,0,0,0" FontSize="12" FontWeight="SemiBold" FontFamily="Segoe UI"
+                                    Cursor="Hand" BorderThickness="1" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Calendar Content -->
+                <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <Grid x:Name="CalendarGrid"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
